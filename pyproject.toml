@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "script-contabilidad"
+version = "0.1.0"
+description = "Scripts y automatizaciones para manipulación y limpieza de datos en documentos contables (Chile)."
+authors = ["tyronejose <alt.tyronejose@gmail.com>"]
+license = "Apache Licence 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
