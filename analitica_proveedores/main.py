@@ -18,10 +18,10 @@ from constants import (
 )
 
 
-def procesar_excel(input_file, output_file):
+def procesar_excel(archivo_entrada, archivo_salidad):
     # Leer la hoja específica "proveedores nacionales" del archivo Excel
     try:
-        df = pd.read_excel(input_file, sheet_name=NOMBRE_HOJA)
+        df = pd.read_excel(archivo_entrada, sheet_name=NOMBRE_HOJA)
     except ValueError:
         raise ValueError("La hoja no existe en el archivo Excel.")
 
@@ -65,8 +65,8 @@ def procesar_excel(input_file, output_file):
     )
 
     # Guardar el resultado en un nuevo archivo Excel
-    df_filtrado.to_excel(output_file, index=False)
-    print(f"Archivo guardado en: {output_file}")
+    df_filtrado.to_excel(archivo_salidad, index=False)
+    print(f"Archivo guardado en: {archivo_salidad}")
 
 
 if __name__ == "__main__":

@@ -46,38 +46,38 @@ def procesar_y_graficar_excel(input_file) -> None:
     agrupado.index = agrupado.index.str.split().str[0:2].str.join(" ")
 
     # Graficar los datos
-    # fichas = agrupado.index
-    # abonos = agrupado[COLUMNA_ABONOS]
-    # cargos = agrupado[COLUMNA_CARGOS]
+    fichas = agrupado.index
+    abonos = agrupado[COLUMNA_ABONOS]
+    cargos = agrupado[COLUMNA_CARGOS]
 
-    # plt.figure(figsize=(10, 4))
-    # plt.bar(fichas, abonos, label="Abonos", color="skyblue")
-    # plt.bar(fichas, cargos, label="Cargos", bottom=abonos, color="lightcoral")
+    plt.figure(figsize=(10, 4))
+    plt.bar(fichas, abonos, label="Abonos", color="skyblue")
+    plt.bar(fichas, cargos, label="Cargos", bottom=abonos, color="lightcoral")
 
-    # # Etiquetas y leyenda
-    # plt.xlabel("Ficha")
-    # plt.ylabel("Monto Total")
-    # plt.title("Totales de Abonos y Cargos por Ficha")
-    # plt.legend()
-    # plt.xticks(rotation=30, fontsize=4, ha="right")
-    # # plt.xticks(rotation=45, ha="right")
-    # plt.tight_layout()
-    # plt.show()
+    # Etiquetas y leyenda
+    plt.xlabel("Ficha")
+    plt.ylabel("Monto Total")
+    plt.title("Totales de Abonos y Cargos por Ficha")
+    plt.legend()
+    plt.xticks(rotation=30, fontsize=4, ha="right")
+    # plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.show()
 
     # Gráfico de torta
     # Suma de Abonos y Cargos totales
-    totales = agrupado.sum(axis=0)
-    plt.figure(figsize=(8, 8))
-    plt.pie(
-        totales,
-        labels=["Abonos", "Cargos"],
-        autopct="%1.1f%%",
-        colors=["skyblue", "lightcoral"],
-        startangle=140,
-    )
-    plt.title("Distribución de Abonos y Cargos Totales")
-    plt.tight_layout()
-    plt.show()
+    # totales = agrupado.sum(axis=0)
+    # plt.figure(figsize=(8, 8))
+    # plt.pie(
+    #     totales,
+    #     labels=["Abonos", "Cargos"],
+    #     autopct="%1.1f%%",
+    #     colors=["skyblue", "lightcoral"],
+    #     startangle=140,
+    # )
+    # plt.title("Distribución de Abonos y Cargos Totales")
+    # plt.tight_layout()
+    # plt.show()
 
 
 if __name__ == "__main__":

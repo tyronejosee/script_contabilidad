@@ -6,9 +6,9 @@ ARCHIVO_ENTRADA = "input.xlsx"
 ARCHIVO_SALIDA = "output.xlsx"
 ARCHIVO_PLOTTING = "output.xlsx"
 
-NOMBRE_HOJA = "proveedores nacionales"
+NOMBRE_HOJA = "id"
+# NOMBRE_HOJA = "proveedores nacionales"
 NOMBRE_HOJA_PLOTTING = "Sheet1"
-# NOMBRE_HOJA = "informeAnalitico"
 
 COLUMNA_FICHA = "Ficha"
 COLUMNA_FECHA = "Fecha"
