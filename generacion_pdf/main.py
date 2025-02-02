@@ -25,7 +25,7 @@ from reportlab.pdfgen import canvas
 INPUT_FILE = "input.xlsx"
 TEMPLATE_PDF = "template.pdf"
 OUTPUT_DIR = "output"
-LINES = False
+LINES = True
 FONT_TYPE = "Helvetica"
 FONT_SIZE = 11
 PAGE_SIZE = letter
@@ -97,9 +97,13 @@ def insert_text(c, data, page_num) -> None:
     c.setFont(FONT_TYPE, FONT_SIZE)
 
     if page_num == 0:
-        c.drawString(110, 630, f"{data['Nombre']}")
-        c.drawString(150, 620, f"{data['Apellido']}")
-        c.drawString(200, 610, f"{data['Edad']}")
+        c.drawString(150, 632, f"{data['Ubicación']}")
+        c.drawString(260, 632, f"{data['Día']}")
+        c.drawString(340, 632, f"{data['Mes']}")
+        c.drawString(130, 618, f"{data['Empleador']}")
+        # c.drawString(120, 632, f"{data['Nombre']}")
+        # c.drawString(150, 620, f"{data['Apellido']}")
+        # c.drawString(200, 610, f"{data['Edad']}")
 
     elif page_num == 1:
         c.drawString(110, 220, f"{data['Nombre Completo']}")
@@ -112,6 +116,10 @@ def generate_pdfs(df, output_dir, template_pdf) -> None:
     for _, row in df.iterrows():
         # Datos para la primera página
         data_page_1 = {
+            "Ubicación": "Santiago",
+            "Día": "02",
+            "Mes": "Enero",
+            "Empleador": "Falseto Falasio Ronaldo Reyes",
             "Nombre": row["Nombre"],
             "Apellido": row["Apellido"],
             "Edad": row["Edad"],

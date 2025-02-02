@@ -15,6 +15,11 @@ pyfiglet = "^1.0.2"
 openpyxl = "^3.1.5"
 jinja2 = "^3.1.5"
 weasyprint = "^64.0"
+pypdf2 = "^3.0.1"
+reportlab = "^4.2.5"
+python-docx = "^1.1.2"
+pip = "^25.0"
+comtypes = "^1.4.9"
 
 
 [build-system]
