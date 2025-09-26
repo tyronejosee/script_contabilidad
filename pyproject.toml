@@ -1,0 +1,23 @@
+[project]
+name = "script-contabilidad"
+version = "0.1.0"
+description = "Scripts de contabilidad y limpieza de datos."
+authors = [
+    {name = "Tyrone Jose", email = "alt.tyrone@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "comtypes==1.4.9",
+    "jinja2==3.1.5",
+    "matplotlib==3.10.0",
+    "openpyxl==3.1.5",
+    "pandas==2.2.3",
+    "pyfiglet==1.0.2",
+    "pyinstaller>=6.16.0",
+    "pypdf2==3.0.1",
+    "python-docx==1.1.2",
+    "reportlab==4.2.5",
+    "termcolor==2.5.0",
+    "weasyprint==64.0",
+]
